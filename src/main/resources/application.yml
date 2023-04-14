@@ -1,3 +1,6 @@
 micronaut:
   application:
     name: azureEmbededApp
+  server:
+    port: 80
+
