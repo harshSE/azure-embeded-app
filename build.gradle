@@ -1,6 +1,7 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.minimal.application") version "3.7.8"
+    id "war"
 }
 
 version = "0.1"
@@ -36,9 +37,14 @@ shadowJar {
 application {
     mainClass.set("com.azureembeddedapp.Application")
 }
+
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
     targetCompatibility = JavaVersion.toVersion("17")
+}
+
+war {
+    archiveFileName = 'azureembedded.war'
 }
 
 
