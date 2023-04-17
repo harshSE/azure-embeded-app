@@ -23,14 +23,14 @@ jobs:
       - name: change gradlew permission
         run: chmod +x gradlew
 
-      - name: Build with Maven
+      - name: Build with Gradle
         run: ./gradlew shadowJar --info
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/build/libs/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
