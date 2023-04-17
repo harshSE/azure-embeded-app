@@ -3,4 +3,9 @@ micronaut:
     name: azureEmbededApp
   server:
     port: 80
-
+  metrics:
+    enabled: true
+    sensitive: false
+    binders:
+      jdbc:
+        enabled: true
