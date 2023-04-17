@@ -49,7 +49,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'azureembededapp'
+          app-name: 'azureembedded'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F25CB4B8EA5B4634884D78BC12A21183 }}
           package: '*.jar'
