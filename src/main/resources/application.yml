@@ -6,6 +6,52 @@ micronaut:
   metrics:
     enabled: true
     sensitive: false
+    export:
+      logging:
+        enabled: true
     binders:
       jdbc:
         enabled: true
+
+db:
+  default:
+    url: '${DB_CONNECTION_STRING:`jdbc:sqlserver://localhost:1433;database=testing;loginTimeout=30;`}'
+    username: '${DB_USERNAME:`sa`}'
+    password: '${DB_PASSWORD:`n0-Password`}'
+
+datasources:
+  default:
+    url: ${db.default.url}
+    username: ${db.default.username}
+    password: ${db.default.password}
+    driverClassName: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
+    dialect: SQL_SERVER
+    validation-query: "SELECT 1"
+    validation-interval: 10000
+    validation-query-timeout: 1000
+    initial-pool-size: 10
+    min-pool-size: 10
+    maximum-pool-size: '${MAXIMUM_DB_POOL_SIZE:25}'
+jpa:
+  default:
+    properties:
+      hibernate:
+        physical_naming_strategy: "org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl"
+        jdbc:
+          time_zone: 'UTC'
+        hbm2ddl:
+          auto: none
+        show_sql: true
+liquibase:
+  enabled: false
+  datasources:
+    default:
+      change-log: 'liquibase-master-changelog.yml'
+      drop-first: false
+      contexts: dev
+
+
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false
+  serialization-inclusion: always
