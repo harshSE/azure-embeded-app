@@ -10,7 +10,7 @@ micronaut:
       logging:
         enabled: true
       azuremonitor:
-        enabled: ${AZURE-MONITOR-ENABLED:false}
+        enabled: true
         instrumentationKey: ${AZUREMONITOR_INSTRUMENTATION_KEY:''}
         step: PT1M
     binders:
