@@ -14,6 +14,7 @@ dependencies {
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut:micronaut-inject-java")
     annotationProcessor("io.micronaut:micronaut-validation")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
 
     implementation("io.micronaut:micronaut-inject")
     implementation("io.micronaut:micronaut-validation")
@@ -21,7 +22,8 @@ dependencies {
     implementation("javax.annotation:javax.annotation-api")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
-    runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    runtimeOnly("com.h2database:h2")
 
     implementation "com.microsoft.azure:applicationinsights-core:${applicationInsightsVersion}"
     implementation "io.micronaut.micrometer:micronaut-micrometer-core"
