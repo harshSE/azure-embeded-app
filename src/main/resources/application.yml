@@ -6,9 +6,6 @@ micronaut:
   metrics:
     enabled: true
     sensitive: false
-    export:
-      logging:
-        enabled: true
     binders:
       jdbc:
         enabled: true
