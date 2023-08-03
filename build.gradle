@@ -29,7 +29,7 @@ dependencies {
     implementation "io.micronaut.micrometer:micronaut-micrometer-core"
     // Also required to enable endpoint
     implementation "io.micronaut:micronaut-management"
-    implementation("io.micronaut.micrometer:micronaut-micrometer-registry-azure-monitor")
+    //implementation("io.micronaut.micrometer:micronaut-micrometer-registry-azure-monitor")
     implementation 'com.microsoft.azure:applicationinsights-agent:3.4.15'
 
 
