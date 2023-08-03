@@ -29,8 +29,8 @@ dependencies {
     implementation "io.micronaut.micrometer:micronaut-micrometer-core"
     // A lso required to enable endpoint
     implementation "io.micronaut:micronaut-management"
-   // implementation("io.micronaut.micrometer:micronaut-micrometer-registry-azure-monitor")
-    implementation 'com.microsoft.azure:applicationinsights-agent:3.4.15'
+   implementation("io.micronaut.micrometer:micronaut-micrometer-registry-azure-monitor")
+    //implementation 'com.microsoft.azure:applicationinsights-agent:3.4.15'
 
 
     developmentOnly("io.micronaut:micronaut-runtime-osx:$micronautVersion")
