@@ -6,11 +6,6 @@ micronaut:
   metrics:
     enabled: true
     sensitive: false
-    export:
-      azuremonitor:
-        enabled: true
-        instrumentationKey: ${AZUREMONITOR_INSTRUMENTATION_KEY:''}
-        step: PT1M
     binders:
       jdbc:
         enabled: true
