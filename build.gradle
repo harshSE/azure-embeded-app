@@ -30,7 +30,7 @@ dependencies {
     // Also required to enable endpoint
     implementation "io.micronaut:micronaut-management"
     implementation("io.micronaut.micrometer:micronaut-micrometer-registry-azure-monitor")
-    //implementation 'com.microsoft.azure:applicationinsights-agent:3.4.15'
+    implementation 'com.microsoft.azure:applicationinsights-agent:3.4.15'
 
 
     developmentOnly("io.micronaut:micronaut-runtime-osx:$micronautVersion")
