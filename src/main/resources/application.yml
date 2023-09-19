@@ -14,6 +14,11 @@ micronaut:
     binders:
       jdbc:
         enabled: true
+  security:
+    intercept-url-map:
+      - pattern: /dbhealth/**
+        access:
+          - isAnonymous()
 
 db:
   default:
