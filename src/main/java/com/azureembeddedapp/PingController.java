@@ -5,9 +5,12 @@ import io.micronaut.http.annotation.Get;
 
 @Controller("/ping")
 public class PingController {
+
+  private int counter;
+
   @Get
   public String ping() {
-    return "pong";
+    return "pong" + ++counter;
   }
 
 }
